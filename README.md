@@ -9,6 +9,10 @@
 - useRef hook -> used to create reference to an element (we used here to ref input fields of the form)
 - firebse set-up
 - hosting on firebase
+- authentication of user (sign in & sign up) using firebase API 
+    - when user is successfully logged In then we should store the data of loggedIn user in our Redux Store, such that it can be made available in our whole app
+- Created Redux Store with userSlice for storing the user data
+
 
 # Features
 - Login / Sign Up
@@ -26,4 +30,4 @@
     - Movie Suggestion
 
 
-# 2.25 hr
+# 2.52 hr
