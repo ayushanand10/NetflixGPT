@@ -9,6 +9,8 @@ import {
 import { auth } from "../utils/firebase"
 import { useDispatch } from "react-redux"
 import { addUser } from "../utils/userSlice"
+import { LOGIN_BG } from "../utils/constants"
+import { USER_AVATAR } from "../utils/constants"
 
 const Login = () => {
   const dispatch = useDispatch()
@@ -42,8 +44,7 @@ const Login = () => {
 
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL:
-              "https://lh3.googleusercontent.com/a/ACg8ocKL2unFJfuc6r-uYF34GFCRB6W1cdh7nu8-BjZfrO55N2k=s382-c-no",
+            photoURL: USER_AVATAR,
           })
             .then(() => {
               // Profile updated!
@@ -98,8 +99,8 @@ const Login = () => {
       <Header />
       <div className='absolute'>
         <img
-          src='https://assets.nflxext.com/ffe/siteui/vlv3/c38a2d52-138e-48a3-ab68-36787ece46b3/eeb03fc9-99c6-438e-824d-32917ce55783/IN-en-20240101-popsignuptwoweeks-perspective_alpha_website_large.jpg'
-          alt='bg-login'
+          src={LOGIN_BG}
+          alt='login-bg'
         />
       </div>
       <form

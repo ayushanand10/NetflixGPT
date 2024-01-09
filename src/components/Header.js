@@ -6,6 +6,7 @@ import { useSelector } from "react-redux"
 import { onAuthStateChanged } from "firebase/auth"
 import { useDispatch } from "react-redux"
 import { addUser, removeUser } from "../utils/userSlice"
+import { LOGO } from "../utils/constants"
 
 const Header = () => {
   const navigate = useNavigate()
@@ -54,7 +55,7 @@ const Header = () => {
     <div className='absolute z-30 px-8 py-2 w-full bg-gradient-to-b from-black flex justify-between'>
       <img
         className='w-36'
-        src='https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png'
+        src={LOGO}
         alt='logo'
       />
       {user && (

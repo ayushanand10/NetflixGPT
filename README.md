@@ -28,6 +28,15 @@
 >   - Shift the API(eventListener) inside the hierarchy (*<Login />* or *<Browse />* or their children)
 > Thus shifting the API in a component which is present in all the pages, i.e., **<Header />** 
 - Unsubscribed to the onAuthStateChanged callback
+- Removing all the hard-coded strings from our app and storing them in a *constants* file
+- Register TMDB API and get access token
+- Get data from TMDB *now playing movies list* API
+- Create **moviesSlice** for storing the *nowPlayingMovies* data in our *Redux store*
+- Create a custom hook for API calling and making our *Browse* component clean
+- UI planning of the *MainContainer* & *SecondaryContainer*
+- Fetch data for trailer video
+- Add trailer video data to our *redux store*
+- Embed the youtube trailer video and make it mute and then autoplay  
 
 
 # Features
@@ -36,11 +45,12 @@
     - Redirect to Browse Page
 - Browse (after Authentication)
     - Header
-    - Main Movie
+    - Main Movie(Main Container)
         - Trailer in BackGround
         - Title & Description
-        - Movie Suggestions
-            - Movie Lists * n
+    - Movie Suggestions (Secondary Container)
+        - Movie Lists * n
+            - Cards * n
 - Netflix GPT
     - Search Bar
     - Movie Suggestion
