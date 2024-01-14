@@ -37,6 +37,9 @@
 - Fetch data for trailer video
 - Add trailer video data to our *redux store*
 - Embed the youtube trailer video and make it mute and then autoplay  
+- Work on Secondary Component
+    - It consists of multiple MovieLists and each List will further consists of multiple MovieCards
+- Fetched Popular Movies, Top-Rated Movies and stored then in Redux store
 
 
 # Features
@@ -56,4 +59,4 @@
     - Movie Suggestion
 
 
-# 016hr
+# 3.05hr
