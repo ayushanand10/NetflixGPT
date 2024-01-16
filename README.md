@@ -40,6 +40,16 @@
 - Work on Secondary Component
     - It consists of multiple MovieLists and each List will further consists of multiple MovieCards
 - Fetched Popular Movies, Top-Rated Movies and stored then in Redux store
+- GPT Search Feature
+- Create *GPTSlice* for storing the data in our store
+- Add search button on the header
+- Handle the toggle functionality
+- Create *GptSearch* component and call it from the *Browse* component
+- Make support of multiple languages
+    - creating separate file for all the string constants with all the languages 
+    - Make list of languages in the *Constants* file for making a dropdown for selecting languages in the header(Navbar)
+- Create *configSlice* for storing the language preference for the user
+    - This *configSlice* can be used to store themes, language, etc which are specific to the current instance of our app  
 
 
 # Features
@@ -59,4 +69,4 @@
     - Movie Suggestion
 
 
-# 3.05hr
+#.49hr

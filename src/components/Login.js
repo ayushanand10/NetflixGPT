@@ -40,7 +40,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user
-          console.log(user)
 
           updateProfile(user, {
             displayName: name.current.value,
@@ -80,7 +79,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user
-          console.log(user)
         })
         .catch((error) => {
           const errorCode = error.code

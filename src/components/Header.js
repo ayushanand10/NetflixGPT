@@ -6,13 +6,16 @@ import { useSelector } from "react-redux"
 import { onAuthStateChanged } from "firebase/auth"
 import { useDispatch } from "react-redux"
 import { addUser, removeUser } from "../utils/userSlice"
-import { LOGO } from "../utils/constants"
+import { LOGO, SUPPORTED_LANGUAGES } from "../utils/constants"
+import { toggleGptSearchView } from "../utils/gptSlice"
+import { changePreferredLanguage } from "../utils/configSlice"
 
 const Header = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
   const user = useSelector((store) => store.user)
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch)
 
   const handleSignOut = () => {
     signOut(auth)
@@ -23,6 +26,14 @@ const Header = () => {
         // An error happened.
         navigate("/error") // will make an error page later
       })
+  }
+
+  const handleGptSearchToggle = () => {
+    dispatch(toggleGptSearchView())
+  }
+
+  const handleLanguageChange = (e) => {
+    dispatch(changePreferredLanguage(e.target.value))
   }
 
   useEffect(() => {
@@ -60,6 +71,29 @@ const Header = () => {
       />
       {user && (
         <div className='flex items-center gap-4'>
+          {showGptSearch && (
+            <select
+              name=''
+              id=''
+              className='bg-black/90 px-3 py-1 text-white rounded cursor-pointer'
+              onChange={handleLanguageChange}
+            >
+              {SUPPORTED_LANGUAGES.map((lang) => (
+                <option
+                  key={lang.identifier}
+                  value={lang.identifier}
+                >
+                  {lang.name}
+                </option>
+              ))}
+            </select>
+          )}
+          <button
+            class='px-3 py-1 mr-4 text-lg font-medium bg-netflix text-white  rounded-md transition delay-150 hover:scale-110'
+            onClick={handleGptSearchToggle}
+          >
+            {!showGptSearch ? "GPT Search" : "Home"}
+          </button>
           <img
             className='w-8'
             src={user.photoURL}
@@ -67,7 +101,7 @@ const Header = () => {
           />
           <button
             onClick={handleSignOut}
-            className='text-white hover:text-red-600 hover:underline'
+            className='text-white transition ease-in hover:-translate-y-1 hover:scale-125 hover:underline '
           >
             Sign Out
           </button>
