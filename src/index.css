@@ -6,13 +6,22 @@
 
 /* For hiding the visible scrollbar */
 @layer utilities {
+
     /* Hide scrollbar for Chrome, Safari and Opera */
     .no-scrollbar::-webkit-scrollbar {
         display: none;
     }
-   /* Hide scrollbar for IE, Edge and Firefox */
+
+    /* Hide scrollbar for IE, Edge and Firefox */
     .no-scrollbar {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-  }
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+}
+
+
+.hover-trigger:hover h1 {
+    visibility: visible;
 }

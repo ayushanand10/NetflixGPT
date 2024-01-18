@@ -92,7 +92,7 @@ const Header = () => {
             class='px-3 py-1 mr-4 text-lg font-medium bg-netflix text-white  rounded-md transition delay-150 hover:scale-110'
             onClick={handleGptSearchToggle}
           >
-            {!showGptSearch ? "GPT Search" : "Home"}
+            {!showGptSearch ? "GPT Search" : "Back to Home"}
           </button>
           <img
             className='w-8'

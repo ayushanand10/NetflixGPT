@@ -49,7 +49,20 @@
     - creating separate file for all the string constants with all the languages 
     - Make list of languages in the *Constants* file for making a dropdown for selecting languages in the header(Navbar)
 - Create *configSlice* for storing the language preference for the user
-    - This *configSlice* can be used to store themes, language, etc which are specific to the current instance of our app  
+    - This *configSlice* can be used to store themes, language, etc which are specific to the current instance of our app
+- Work with GPT API
+    - Create a new Openai a/c to use free credit of $5 
+    - Get API key
+    - Store in a constant file and create *openai.js* file
+    - Call the API from *SearchBar* component with
+        - Extracted input text with help of *useRef* hook
+        - resolve the error by allowing *dangerouslyAllowBrowser: true* in *openai.js* file
+    - split the response of API
+    - Call TMDB API with GPT's movies responses 
+        - Resolve the Promises using *Promise.all()*
+- Store API response in the *redux store* mainly in the *gptSlice*
+- Reuse the *MovieList* component and show the Movie Results
+- Hide the API of *openai* and *TMDB* in *.env* file 
 
 
 # Features
@@ -67,6 +80,7 @@
 - Netflix GPT
     - Search Bar
     - Movie Suggestion
+    - Multi lingual
 
 
-#.49hr
+#3.08hr
