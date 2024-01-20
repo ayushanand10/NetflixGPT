@@ -63,6 +63,9 @@
 - Store API response in the *redux store* mainly in the *gptSlice*
 - Reuse the *MovieList* component and show the Movie Results
 - Hide the API of *openai* and *TMDB* in *.env* file 
+- Memoization : While going to GPTSearch and then returning back to Home page all the API(s) are called again and if doing this multiple times altogethar increases the load of the website and thus making it slow
+    - To avoid this situation we check the store before hand while calling the API
+- Creating the mobile view for our app
 
 
 # Features

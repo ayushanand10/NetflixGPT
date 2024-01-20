@@ -13,7 +13,7 @@ const MainComponent = () => {
   const { original_title, overview, id } = mainMovie
 
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col bg-black pt-36 md:pt-0 pb-10 md:pb-0'>
       <VideoTitle
         title={original_title}
         overview={overview}

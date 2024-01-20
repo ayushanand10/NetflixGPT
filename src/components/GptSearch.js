@@ -6,7 +6,7 @@ const GptSearch = () => {
   return (
     <div className=''>
       <img
-        className='fixed -z-10 h-screen w-full'
+        className='fixed -z-10 h-screen w-full object-cover md:object-none'
         src={LOGIN_BG}
         alt='login-bg'
       />

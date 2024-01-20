@@ -7,7 +7,7 @@ const SecondaryComponent = () => {
   
   return (
     <div className='bg-black'>
-      <div className='-mt-56 relative z-20'>
+      <div className='md:-mt-56 relative z-20'>
         <MovieList
           title={"Now Playing"}
           movies={movies.nowPlayingMovies}
@@ -21,16 +21,6 @@ const SecondaryComponent = () => {
           movies={movies.topRatedMovies}
         />
       </div>
-      {/* 
-        MovieList - Popular
-          MovieCard * n
-        MovieList - Trending
-          MovieCard * n
-        MovieList - Now Playing
-          MovieCard * n
-        MovieList - Horror
-          MovieCard * n
-      */}
     </div>
   )
 }

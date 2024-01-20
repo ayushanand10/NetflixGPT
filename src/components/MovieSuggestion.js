@@ -9,7 +9,7 @@ const MovieSuggestion = () => {
 
   return (
     <div className="mt-4 bg-black/90 p-4">
-      <h1 className="text-5xl text-white font-medium ">Search Results</h1>
+      <h1 className="text-3xl md:text-5xl text-white font-medium ">Search Results</h1>
       <div className=''>
         {movieNames.map((movieName, index) => (
           <MovieList

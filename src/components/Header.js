@@ -63,14 +63,14 @@ const Header = () => {
   }, [])
 
   return (
-    <div className='absolute z-30 px-8 py-2 w-full bg-gradient-to-b from-black flex justify-between'>
+    <div className='absolute z-30 px-4 md:px-8 py-2 w-full bg-gradient-to-b from-black flex flex-col md:flex-row items-center gap-2 justify-between'>
       <img
         className='w-36'
         src={LOGO}
         alt='logo'
       />
       {user && (
-        <div className='flex items-center gap-4'>
+        <div className='flex items-center justify-around w-full md:w-auto gap-2 md:gap-4'>
           {showGptSearch && (
             <select
               name=''
@@ -89,22 +89,24 @@ const Header = () => {
             </select>
           )}
           <button
-            class='px-3 py-1 mr-4 text-lg font-medium bg-netflix text-white  rounded-md transition delay-150 hover:scale-110'
+            class='px-3 py-1 md:mr-4 text-lg font-medium bg-netflix text-white  rounded-md transition delay-150 hover:scale-110'
             onClick={handleGptSearchToggle}
           >
-            {!showGptSearch ? "GPT Search" : "Back to Home"}
+            {!showGptSearch ? "GPT Search" : "Home"}
           </button>
-          <img
-            className='w-8'
-            src={user.photoURL}
-            alt='userIcon'
-          />
-          <button
-            onClick={handleSignOut}
-            className='text-white transition ease-in hover:-translate-y-1 hover:scale-125 hover:underline '
-          >
-            Sign Out
-          </button>
+          <div className='flex items-end gap-1'>
+            <img
+              className='hidden md:block w-8'
+              src={user.photoURL}
+              alt='userIcon'
+            />
+            <button
+              onClick={handleSignOut}
+              className='text-white transition ease-in hover:-translate-y-1 hover:scale-125 hover:underline '
+            >
+              Sign Out
+            </button>
+          </div>
         </div>
       )}
     </div>
